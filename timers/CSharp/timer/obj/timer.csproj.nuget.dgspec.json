@@ -10,7 +10,7 @@
         "projectUniqueName": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj",
         "projectName": "timer",
         "projectPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj",
-        "packagesPath": "C:\\Users\\jfawc\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Jim\\.nuget\\packages\\",
         "outputPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
@@ -18,7 +18,7 @@
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jfawc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jim\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],

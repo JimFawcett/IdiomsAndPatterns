@@ -84,5 +84,3 @@ public sealed class Clock : IDisposable
         _startTimestamp.Dispose();
     }
 }
-
-PS,

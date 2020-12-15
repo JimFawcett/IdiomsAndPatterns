@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\test1.csproj": {}
+    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\Timer\\Timer.csproj": {}
   },
   "projects": {
-    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\test1.csproj": {
+    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\Timer\\Timer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\test1.csproj",
-        "projectName": "test1",
-        "projectPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\test1.csproj",
+        "projectUniqueName": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\Timer\\Timer.csproj",
+        "projectName": "Timer",
+        "projectPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\Timer\\Timer.csproj",
         "packagesPath": "C:\\Users\\jfawc\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\obj\\",
+        "outputPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\Timer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -23,15 +23,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {}
           }
         },
@@ -42,8 +42,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "imports": [
             "net461",
             "net462",
@@ -54,16 +54,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.10, 3.1.10]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.10, 3.1.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"

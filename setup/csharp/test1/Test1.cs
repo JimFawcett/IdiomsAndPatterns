@@ -1,20 +1,4 @@
-﻿/////////////////////////////////////////////////////////////
-// Test1.cs - demo building and running basic project      //
-//                                                         //
-// Jim Fawcett, https://JimFawcett.github.io, 15 Dec 2020  //
-/////////////////////////////////////////////////////////////
-/*
-   Create project:
-   - create folder test1
-   - cd test1
-   - dotnet new Console -n test1
-   - rename Project.cs to Test1.cs
-   Build and run project:
-   - dotnet run test1
-   Clean project
-   - dotnet clean
-*/
-using System;
+﻿using System;
 
 namespace test1
 {

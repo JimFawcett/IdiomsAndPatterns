@@ -1,4 +1,25 @@
-// test1.cpp
+/////////////////////////////////////////////////////////////
+// test1.cpp - demonstrate creating basic project          //
+//                                                         //
+// Jim Fawcett, https://JimFawcett.github.io, 15 Dec 2020  //
+/////////////////////////////////////////////////////////////
+/*
+    Create basic project:
+    - mkdir cpp
+    - echo " " > test1.cpp
+    - open editor and add content
+    - echo " " > CMakeLists.txt
+    - add content, using CMakeDemo as reference
+    - mkdir build
+    Build project:
+    - cd build
+    - cmake ..
+    - cmake --build .
+    Run image:
+    - "./debug/test1"
+    Clean project:
+    - delete contents of build directory
+*/
 
 #include <iostream>
 #include <string>

@@ -14,6 +14,6 @@ void flush_test() {
 int main() {
     std::cout << "\n  hello test1";
     flush_test();
-    std::cout << " " << helper();
+    std::cout << " and " << helper();
     std::cout << "\n\n  That's all Folks\n\n";
 }

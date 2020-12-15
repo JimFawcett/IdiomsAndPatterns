@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj": {}
+    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer.csproj": {}
   },
   "projects": {
-    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj": {
+    "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj",
+        "projectUniqueName": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer.csproj",
         "projectName": "timer",
-        "projectPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\timer.csproj",
+        "projectPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer.csproj",
         "packagesPath": "C:\\Users\\jfawc\\.nuget\\packages\\",
-        "outputPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer\\obj\\",
+        "outputPath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -31,6 +31,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +43,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -52,12 +54,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

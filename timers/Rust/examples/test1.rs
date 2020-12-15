@@ -1,13 +1,20 @@
-/*-----------------------------------------------
-  Demonstrations of StopWatch, Timer, ...
-*/
-use rust_timer::{stop_watch, timer, date_time_stamp, date_stamp, time_stamp};
+/*---------------------------------------------------------
+  Test1.rs
+    Demonstrations of StopWatch, Timer, ...
+
+  Jim Fawcett, https://JimFawcett.github.io, 15 Dec 2020
+---------------------------------------------------------*/
+
+use rust_timer::{
+  stop_watch, timer, date_time_stamp, date_stamp, time_stamp
+};
 
 fn main() {
     print!("\n  === demo date_time_timer ===");
     println!();
     
     print!("\n  -- demo StopWatch --");
+    print!("\n  requesting 25 millisec sleep");
     stop_watch(25);
     println!();
     

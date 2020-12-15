@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "gywDZbBYKIqC6T9PjaxQTrq1xytD8LvFJML4guXzYh20rRHQF/PLpA9blanWPpw3+dFKFAWx5/uF9fOYJ5L6PQ==",
+  "success": true,
+  "projectFilePath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\timers\\CSharp\\timer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jfawc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\jfawc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -56,8 +56,8 @@ pub fn sleep(millisec:u64) {
 pub fn stop_watch(millisec: u64) {
     let mut sw = StopWatch::new();
     sleep(millisec);
-    let time = sw.stop().as_millis();
-    print!("\n  elapsed time = {:?} milliseconds",time);
+    let time = sw.stop().as_micros();
+    print!("\n  elapsed time = {:?} microseconds",time);
 }
 /*-----------------------------------------------
   Timer instance invokes callback after 

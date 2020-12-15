@@ -1,67 +1,29 @@
 #---------------------------------------------------
-# DateTime - C++ timer class
+# DemoDateTime - demonstrate C++ timer class
+#---------------------------------------------------
+#
+#---------------------------------------------------
+# Build directions:
+# 1. navigate to project directory
+# 2. mkdir build
+# 3. cmake ..
+# 4. cmake --build . [--config Debug] | [--config Release]
+# To Execute:
+# 5. "./debug/DemoDateTime"
 #---------------------------------------------------
 
-#---------------------------------------------------
-project(DateTime)
-#---------------------------------------------------
-#   CMakeDemo dir
-#   -- CMakeLists.txt (this file)
-#   -- src dir
-#      -- hello_cmake.cpp
-#      -- helper.h, helper.cpp
-#   -- libs dir
-#      -- hello_lib dir
-#         -- hello_lib.h, hello_lib.cpp 
-#   -- build directory
-#      -- Debug directory 
-#         -- HelloCMake.exe 
-#         -- ...
-#      -- HelloCMake.dir directory
-#         -- Debug directory 
-#            -- hello_cmake.obj 
-#            -- hello_lib.obj 
-#            -- helper.obj
-#            -- ...
-#---------------------------------------------------
+project(DemoDateTime)
 
 set(CMake_CXX_STANDARD 20)
 
 #---------------------------------------------------
-# build HelloCMake.obj in folder build/HelloCMake.dir/debug
+# build DemoDateTime.exe in folder build/Debug
 #---------------------------------------------------
-add_executable(DateTime src/DateTime.cpp)
-#add_executable(DateTime src/DateTime.h)
-add_compile_definitions(TEST_DATETIME)
+#add_compile_definitions(TEST_DATETIME)
+add_executable(DemoDateTime src/DateTime.cpp)
+add_executable(DemoDateTime src/DemoDateTime.cpp)
 
 #---------------------------------------------------
-# build HelloCMakeLib.lib in folder build/debug
-#---------------------------------------------------
-#add_library(DateTimeLib STATIC libs/date_time/DateTime.cpp)
-
-#---------------------------------------------------
-# link HelloCMake.obj and HelloCMakeLib.lib to 
-# create HelloCMake.exe in folder  build/debug
-#---------------------------------------------------
-#target_link_libraries(DateTime DateTimeLib)
-
-#---------------------------------------------------
-# Build process with CMake version 3.18.2
-#---------------------------------------------------
-#   1. add source files to project directories 
-#   2. add CMakeLists.txt (this file)
-#   3. mkdir build                 - this puts intermediate
-#   4. cd build                      files in build directory
-#   5. cmake ..                    - create cmake config files
-#   6. cmake --build . [--config Debug | --config Release]
-#   7. "./Debug/HelloCmake.exe"    - runs executable 
-#   8. Notes:
-#      - you can change any of the source files then: 
-#          cmake --build . --config Debug
-#          "./Debug/HelloCmake.exe
-#      - delete contents of build directory to clean
-#          cmake will regenerate
-#   9. Note: 
-#      - you can substitute Release for Debug 
-#        in contents of 8.
+# For a demo of CMake syntax see
+# https://github.com/JimFawcett/CppBasicDemos/tree/master/CMakeDemo
 #---------------------------------------------------

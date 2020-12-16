@@ -1,0 +1,13 @@
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.exe
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.deps.json
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.json
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.runtimeconfig.dev.json
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.dll
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\bin\x64\Debug\netcoreapp3.1\ConsoleApp.pdb
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.csprojAssemblyReference.cache
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfoInputs.cache
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.AssemblyInfo.cs
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.csproj.CoreCompileInputs.cache
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.dll
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.pdb
+c:\github\JimFawcett\IdiomsAndPatterns\setup\csharp\ConsoleApp\obj\x64\Debug\netcoreapp3.1\ConsoleApp.genruntimeconfig.cache

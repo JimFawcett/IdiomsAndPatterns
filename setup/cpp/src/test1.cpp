@@ -6,8 +6,12 @@
 /*
     Create basic project:
     - mkdir cpp
+    - cd cpp
+    - mkdir src
+    - cd src
     - echo " " > test1.cpp
     - open editor and add content
+    - cd ..
     - echo " " > CMakeLists.txt
     - add content, using CMakeDemo as reference
     - mkdir build

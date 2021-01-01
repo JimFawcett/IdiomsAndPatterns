@@ -1,3 +1,4 @@
 {
-    "workbench.panel.defaultLocation": "right"
+    "workbench.panel.defaultLocation": "right",
+    "cmake.configureOnOpen": false
 }

@@ -1,0 +1,28 @@
+<pre>// CppObject::CreateObj.cpp
+
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class DemoObject {
+public:
+  DemoObject(const std::string&amp; name) : name_(name) {}
+  std::string name();
+private:
+  std::string name_;
+};
+
+std::string DemoObject::name() {
+  return name_;
+}
+
+int main() {
+  DemoObject dob("Zing");
+  std::cout &lt;&lt; "\n  Created DemoObject instance with name " 
+            &lt;&lt; dob.name();
+  /* create clone using compiler generated copy constructor */
+  DemoObject cln = dob;
+  std::cout &lt;&lt; "\n  Created DemoObject clone with name " 
+            &lt;&lt; cln.name();
+
+  std::cout &lt;&lt; "\n  That's all Folks" &lt;&lt; "\n\n";
+}</pre>

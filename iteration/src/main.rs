@@ -18,6 +18,9 @@ fn string_iteration() {
     let mut iter = test_string.chars();  // chars returns an iterator over utf8 characters
     print!("\n  utf8 characters from {:?}:\n  ", &test_string);
 
+    // let ls = test_string.as_str();
+    // print!("\n  test_string: {:?}", ls);
+
     loop {
         let opt = iter.next();  // iterator returns std::option<char>
         if opt == None {
@@ -54,7 +57,7 @@ fn idomatic_string_iteration() {
 fn define_and_iterate_byte_array() {
     let ba: [u8;5] = [1,2,3,4,5];  
     // size must be determined at compile-time, even for
-    // arrays create on the heap (unlike C++)
+    // arrays created on the heap (unlike C++)
     let max = ba.len();
     print!("\n  bytes from byte array:\n  [");
     for i in 0..max-1 {
@@ -78,13 +81,15 @@ fn idiomatic_define_and_iterate_byte_array() {
     print!("\n  idiomatic bytes from byte array:");
     print!("\n  length of byte slice: {}", ba.len());
     let max = ba.len();
+    /*-- print all but the last --*/
     print!("\n  [");
     for item in ba.iter().take(max-1) {
         print!("{}, ", item);
     }
+    /*-- now print the last one --*/
     print!("{}]", ba[max - 1]);
 
-    print!("\n  even shorter:");
+    print!("\n  printing array with implicit iteration:");
     print!("\n  {:?}", ba);
 }
 

@@ -22,29 +22,20 @@
     Demo&lt;T&gt;.
 */
 #include &lt;iostream&gt;
+#include &lt;memory&gt;
 using Byte = unsigned short;
 
 template&lt;typename T&gt;
 struct Calc {
-    /*-------------------------------------
-      C++ creational functions normally
-      return a base pointer, e.g.
-      Calc&lt;T&gt;*, supporting dynamic
-      polymorphic operations.
-
-      We are only using static polymorphic
-      operations, so this works, and is
-      close to the way Rust works. 
-    */
-    static Calc&lt;T&gt; create();
+    static std::unique_ptr&lt;Calc&lt;T&gt;&gt; create();
     T calc(T arg1, T arg2);
 };
 
 template&lt;typename T&gt;
 class Plus : public Calc&lt;T&gt; {
 public:
-    static Plus&lt;T&gt; create() {
-        return Plus();
+    static std::unique_ptr&lt;Calc&lt;T&gt;&gt; create() {
+        return std::unique_ptr&lt;Calc&lt;T&gt;&gt;(new Plus);
     }
     T calc(T arg1, T arg2)
     {
@@ -55,8 +46,8 @@ public:
 template&lt;typename T&gt;
 class Times : public Calc&lt;T&gt; {
 public:
-    static Times&lt;T&gt; create() {
-        return Times();
+    static std::unique_ptr&lt;Calc&lt;T&gt;&gt; create() {
+        return std::unique_ptr&lt;Calc&lt;T&gt;&gt;(new Times);
     }
     T calc(T arg1, T arg2)
     {
@@ -69,10 +60,10 @@ template&lt;typename U, typename T&gt;
 class Demo {
 public:
     Demo() {
-        U oper = U::create();
+        std::unique_ptr&lt;Calc&lt;T&gt;&gt; oper = U::create();
     }
     T do_calc(T arg1, T arg2) {
-        T rslt = oper.calc(arg1, arg2);
+        T rslt = oper-&gt;calc(arg1, arg2);
         result = rslt;
         return rslt;
     }
@@ -80,7 +71,7 @@ public:
         return result;
     }
 private:
-    U oper;
+    std::unique_ptr&lt;U&gt; oper;
     T result;
 };
 int main() {
@@ -93,7 +84,7 @@ int main() {
     std::cout &lt;&lt; "\n";
     
     Demo&lt;Times&lt;double&gt;, double&gt; demo2;
-    double some_number = demo2.do_calc(42.0, 2.0);
+    double some_number = demo2.do_calc(42.5, 2.0);
     std::cout &lt;&lt; "\n  some-number = " &lt;&lt; some_number;
     std::cout &lt;&lt; "\n  saved result: " &lt;&lt; demo2.get_result();
 

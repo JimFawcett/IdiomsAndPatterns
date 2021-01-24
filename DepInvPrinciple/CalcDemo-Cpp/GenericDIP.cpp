@@ -22,29 +22,20 @@
     Demo<T>.
 */
 #include <iostream>
+#include <memory>
 using Byte = unsigned short;
 
 template<typename T>
 struct Calc {
-    /*-------------------------------------
-      C++ creational functions normally
-      return a base pointer, e.g.
-      Calc<T>*, supporting dynamic
-      polymorphic operations.
-
-      We are only using static polymorphic
-      operations, so this works, and is
-      close to the way Rust works. 
-    */
-    static Calc<T> create();
+    static std::unique_ptr<Calc<T>> create();
     T calc(T arg1, T arg2);
 };
 
 template<typename T>
 class Plus : public Calc<T> {
 public:
-    static Plus<T> create() {
-        return Plus();
+    static std::unique_ptr<Calc<T>> create() {
+        return std::unique_ptr<Calc<T>>(new Plus);
     }
     T calc(T arg1, T arg2)
     {
@@ -55,8 +46,8 @@ public:
 template<typename T>
 class Times : public Calc<T> {
 public:
-    static Times<T> create() {
-        return Times();
+    static std::unique_ptr<Calc<T>> create() {
+        return std::unique_ptr<Calc<T>>(new Times);
     }
     T calc(T arg1, T arg2)
     {
@@ -69,10 +60,10 @@ template<typename U, typename T>
 class Demo {
 public:
     Demo() {
-        U oper = U::create();
+        std::unique_ptr<Calc<T>> oper = U::create();
     }
     T do_calc(T arg1, T arg2) {
-        T rslt = oper.calc(arg1, arg2);
+        T rslt = oper->calc(arg1, arg2);
         result = rslt;
         return rslt;
     }
@@ -80,7 +71,7 @@ public:
         return result;
     }
 private:
-    U oper;
+    std::unique_ptr<U> oper;
     T result;
 };
 int main() {
@@ -93,7 +84,7 @@ int main() {
     std::cout << "\n";
     
     Demo<Times<double>, double> demo2;
-    double some_number = demo2.do_calc(42.0, 2.0);
+    double some_number = demo2.do_calc(42.5, 2.0);
     std::cout << "\n  some-number = " << some_number;
     std::cout << "\n  saved result: " << demo2.get_result();
 

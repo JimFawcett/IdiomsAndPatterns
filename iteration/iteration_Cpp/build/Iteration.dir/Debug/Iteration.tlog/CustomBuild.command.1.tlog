@@ -1,0 +1,10 @@
+^C:\GITHUB\JIMFAWCETT\IDIOMSANDPATTERNS\ITERATION\ITERATION_CPP\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp -BC:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp/build --check-stamp-file C:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,3 @@
+C:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp/build/CMakeFiles/Iteration.dir
+C:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp/build/CMakeFiles/ALL_BUILD.dir
+C:/github/JimFawcett/IdiomsAndPatterns/iteration/iteration_Cpp/build/CMakeFiles/ZERO_CHECK.dir

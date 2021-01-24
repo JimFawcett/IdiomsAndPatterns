@@ -12,6 +12,21 @@
     can not be indexed.  Character boundaries are defined by specific
     byte sequences, used by String's chars() iterator to return sequences
     of characters.
+
+    References:
+    -----------
+    String      
+      https://doc.rust-lang.org/std/string/struct.String.html
+    chars()     
+      https://doc.rust-lang.org/std/string/struct.String.html#method.chars
+    slice
+      https://doc.rust-lang.org/std/slice/index.html
+    iterator
+      https://doc.rust-lang.org/std/iter/trait.Iterator.html
+    array
+      https://doc.rust-lang.org/std/primitive.array.html
+    Vector
+      https://doc.rust-lang.org/std/vec/struct.Vec.html
 */
 fn string_iteration() {
     let test_string = String::from("a test string");

@@ -15,11 +15,9 @@
 */
 fn string_iteration() {
     let test_string = String::from("a test string");
-    let mut iter = test_string.chars();  // chars returns an iterator over utf8 characters
+    /* chars() returns an iterator over utf8 characters */
+    let mut iter = test_string.chars();  
     print!("\n  utf8 characters from {:?}:\n  ", &test_string);
-
-    // let ls = test_string.as_str();
-    // print!("\n  test_string: {:?}", ls);
 
     loop {
         let opt = iter.next();  // iterator returns std::option<char>
@@ -28,6 +26,10 @@ fn string_iteration() {
         }
         print!("{} ",opt.unwrap());  // unwrap char from Some(char)
     }
+
+    let ls = test_string.as_str();
+    print!("\n  test_string: {:?}", ls);
+    println!();
 }
 
 fn idomatic_string_iteration() {
@@ -38,6 +40,70 @@ fn idomatic_string_iteration() {
         print!("{} ",ch);  // option handling is done implicitly in 
                            // for/in loop
     }
+    /*-- nth(i) returns Option as i may not be in range --*/
+    let rslt = &test_string.chars().nth(1);
+    if rslt.is_some() {
+        let char2 = rslt.unwrap();
+        print!("\n  2nd character of {:?} is {}", test_string, char2);
+    }
+
+    let ls = test_string.as_str();
+    print!("\n  test_string: {:?}", ls);
+    println!();
+}
+/*-----------------------------------------------
+  demonstrate chars(), is_alphabetic, is_..., 
+  for_each, filter, and collect
+
+  There are many iterator adapters.  These are
+  some of the most often used.
+*/
+fn string_adapters() {
+    let ls = "abc123";
+
+    /*-- are all chars alphabetic --*/
+    print!(
+        "\n  {:?} is alphabetic   {}", ls,  
+        ls.chars().all(|c| {c.is_alphabetic()})
+    );
+
+    /*-- are all chars alphanumeric? --*/
+    print!(
+        "\n  {:?} is alphanumeric {}", ls, 
+        ls.chars().all(|c| {c.is_alphanumeric()})
+    );
+
+    /*-- are all chars numeric? --*/
+    print!(
+        "\n  {:?} is numeric      {}", ls, 
+        ls.chars().all(|c| {c.is_numeric()})
+    );
+
+    /*-- are all chars ascii? --*/
+    print!(
+        "\n  {:?} is ascii        {}", ls, 
+        ls.chars().all(|c| {c.is_ascii()})
+    );
+    
+    /*-- display chars from str slice --*/
+    let (min, max) = (2usize, 4usize);
+    if min <= ls.len() && max <= ls.len() && min <= max {
+        let slice = &ls[min..max];
+        print!("\n  third and fourth chars of {:?} are: ", ls);
+        slice.chars().for_each(|c| print!("{}", c));
+    }
+    else {
+        print!("\n  slice bounds {} and {} are invalid for {}",
+            min, max, ls
+        )
+    }
+
+    /*-- form string from numeric chars in source, ls --*/
+    print!(
+        "\n  numeric chars of {:?} are: {:?}", ls,
+        ls.chars().filter(|c| c.is_numeric()).collect::<String>()
+    );
+    println!();
 }
 /*
   Rust byte arrays
@@ -60,9 +126,11 @@ fn define_and_iterate_byte_array() {
     // arrays created on the heap (unlike C++)
     let max = ba.len();
     print!("\n  bytes from byte array:\n  [");
+    /*-- display all but last --*/
     for i in 0..max-1 {
         print!("{}, ", ba[i]);
     }
+    /*-- display last char --*/
     print!("{}]", ba[max-1]);
 }
 
@@ -86,7 +154,7 @@ fn idiomatic_define_and_iterate_byte_array() {
     for item in ba.iter().take(max-1) {
         print!("{}, ", item);
     }
-    /*-- now print the last one --*/
+    /*-- now print last one without trailing comma --*/
     print!("{}]", ba[max - 1]);
 
     print!("\n  printing array with implicit iteration:");
@@ -94,9 +162,13 @@ fn idiomatic_define_and_iterate_byte_array() {
 }
 
 fn main() {
+    print!("\n  -- demonstrate iteration --\n");
+
     print!("\n  -- string iteration --");
     string_iteration();
     idomatic_string_iteration();
+    print!("\n  -- string iteration adapters --");
+    string_adapters();
     print!("\n\n  -- byte array iteration --");
     define_and_iterate_byte_array();
     idiomatic_define_and_iterate_byte_array();

@@ -1,7 +1,8 @@
 /////////////////////////////////////////////////////////////
-// idioms::main.rs                                         //
-//   - styles of writing brief snippets of code in ways    //
-//     that are valued by the language community           //
+// idioms::iteration::main.rs                              //
+//   - idioms are styles of writing brief snippets of code //
+//     in ways that are valued by the language community   //
+//   - this idiom code focuses on iteration                //
 // Jim Fawcett, https://JimFawcett.github.io, 15 Sep 2020  //
 /////////////////////////////////////////////////////////////
 /*

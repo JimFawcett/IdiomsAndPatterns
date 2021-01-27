@@ -1,0 +1,61 @@
+<pre>/* DataOps.cpp - demo data operations */
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+
+template &lt;typename Coll&gt;
+void show(const Coll&amp; c, const std::string&amp; msg = "") {
+  std::cout &lt;&lt; "\n  ";
+  if(msg.length() &gt; 0) {
+    std::cout &lt;&lt; msg &lt;&lt; " ";
+  }
+  using typename ValType = Coll::value_type;
+
+  for(ValType item : c) {
+    std::cout &lt;&lt; item &lt;&lt; " ";
+  }
+}
+
+int main() {
+    std::cout &lt;&lt; 
+      "\n  -- demonstrating data operations --\n";
+    /*
+      Primitive data types: int, double, ... 
+      occupy contiguous regions of memory,
+      so copies simply copy memory.
+    */
+    std::cout &lt;&lt; "\n  -- integer ops --";
+
+    int x = 42;
+    auto y = x - 2;  // copy construction
+    std::cout &lt;&lt; "\n  x = " &lt;&lt; x &lt;&lt; ", y = " &lt;&lt; y;
+
+    x = y;              // copy assign
+    std::cout &lt;&lt; "\n  after copy assign: x = y";
+    std::cout &lt;&lt; "\n  x = " &lt;&lt; x 
+              &lt;&lt; ", y = " &lt;&lt; y &lt;&lt; "\n";
+   
+    /*
+      Most non-primitive types: Vec&lt;T&gt;, String, ...
+      occupy memory on stack and heap,
+      so they do not satisfy the copy trait
+    */
+    std::cout &lt;&lt; "\n  -- Vec ops --";
+    
+    std::vector&lt;int&gt; v { 1,2,4 };
+    show(v, "v = ");
+
+    auto w = v;  // copy assign - a clone
+    std::cout &lt;&lt; 
+      "\n  after copy construction: let w = v:";
+    show(v, "v = ");
+    show(w, "w = ");
+
+    std::cout &lt;&lt; "\n  set w[1] = -2";
+    w[1] = -2;
+    show(v, "v = ");
+    show(w, "w = ");
+
+    std::cout &lt;&lt; "\n\n  That's all Folks!!\n\n";
+}</pre>

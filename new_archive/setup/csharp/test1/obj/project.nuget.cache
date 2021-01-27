@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "IsA9BlI7Bc7jGcZCqo6R6CWLruOVcWx42nDKg/46g0rgKS/Fhv7U6UFwyQ4HZnm7dloC33A2T/yovQg90VIb+w==",
+  "success": true,
+  "projectFilePath": "C:\\github\\JimFawcett\\IdiomsAndPatterns\\setup\\csharp\\test1\\test1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jfawc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\jfawc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -4,11 +4,11 @@
 #---------------------------------------------------
 
 #---------------------------------------------------
-project(Iteration)
+project(StrIter)
 #---------------------------------------------------
 set(CMAKE_CXX_STANDARD 20)
 #---------------------------------------------------
 # build Iteration.exe in folder build/debug
 #---------------------------------------------------
-add_executable(Iteration Iteration.cpp)
+add_executable(StrIter StrIter.cpp)
 

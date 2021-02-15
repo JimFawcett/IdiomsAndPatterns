@@ -1,0 +1,16 @@
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.exe
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.deps.json
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.runtimeconfig.json
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.runtimeconfig.dev.json
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.dll
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\ref\BasicDip-C#.dll
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\bin\x64\Debug\net5.0\BasicDip-C#.pdb
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.csprojAssemblyReference.cache
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.AssemblyInfoInputs.cache
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.AssemblyInfo.cs
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.csproj.CoreCompileInputs.cache
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.dll
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\ref\BasicDip-C#.dll
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.pdb
+C:\github\JimFawcett\IdiomsAndPatterns\DepInvPrinciple\BasicDip-C#\obj\x64\Debug\net5.0\BasicDip-C#.genruntimeconfig.cache

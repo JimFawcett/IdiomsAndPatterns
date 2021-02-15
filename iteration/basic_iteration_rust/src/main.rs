@@ -33,7 +33,8 @@ fn iterate_byte_array() {
     There are three forms:
     - iter() iterates over &T
     - iter_mut() iterates over &mut T
-    - into_iter() iterates over T
+    - into_iter() takes ownership and iterates 
+      over T
   */
   puttxt("-- using basic iteration --");
   let ba: [u8;5] = [1, 2, 3, 4, 5];
@@ -54,7 +55,7 @@ fn iterate_byte_array() {
     for-in uses iter() internally, with implicit
     handling of Option
   */
-  for it in 0..5 {
+  for it in 0..ba.len() {
       print!("{} ", ba[it]);
   }
   putln();
@@ -67,7 +68,14 @@ fn iterate_byte_array() {
 
   puttxt("-- using generic put_coll --\n  ");
   let iter = ba.iter();
-  put_coll(iter);
+  put_coll(iter);  // see below
+  putln();
+
+  let iter = ba.iter();
+  print!("\n  {}", &put_coll_to_string(iter));
+  let iter = ba.iter();
+  let result = clamp(&put_coll_to_string(iter), "{}");
+  print!("\n  {}", &result);
   putln();
 
   puttxt("-- using iterator adapter --\n  ");
@@ -77,18 +85,19 @@ fn iterate_byte_array() {
   }
 
 fn main() {
-    print!("\n  -- iter'n over byte arrays --\n");
+    print!(
+      "\n  -- iteration over byte arrays --\n"
+    );
 
     iterate_byte_array();
-    // idiomatic_iterate_byte_array();
 
     print!("\n\n  That's all Folks!\n\n");
 }
 /*-----------------------------------------------
-  Helper functions here because I get tired of
-  reaching for the !
+  print helper functions here because I get tired
+  of reaching for the !
 */
-/*-- helper function --*/
+/*-- emit linefeed --*/
 fn putln() {
     println!();
 }
@@ -99,25 +108,65 @@ fn puttxt(t: &str) {
 /*-----------------------------------------------
   Emit comma delimited sequence of values from
   generic collection.
-
-  Suggest you ignore this until we discuss
-  traits.  It's here because I wanted to figure
-  out how make this work.  Compiler suggestions
-  were a big help.
 */
-fn put_coll<C: ExactSizeIterator + Iterator>(c:C) 
+// fn put_coll_alt<C: ExactSizeIterator + Iterator>(c:C) 
+//      where <C as Iterator>::Item: Debug {
+//     let len = &c.len();
+//     let mut count : usize = 0;
+//     print!("[");
+//     for item in c {
+//         count = count + 1;
+//         if count < *len {
+//             print!("{:?}, ", item);
+//         }
+//         else {
+//             print!("{:?}", item);
+//         }
+//     }
+//     print!("]");
+// }
+/*-----------------------------------------------
+  Emit comma delimited sequence of values from
+  generic collection.
+
+  Traits use here is somewhat complex.  Compiler 
+  suggestions were a big help.
+*/
+fn put_coll<C: ExactSizeIterator + Iterator>(
+  mut c:C
+)
      where <C as Iterator>::Item: Debug {
-    let len = &c.len();
-    let mut count : usize = 0;
-    print!("[");
+    print!("{:?}", c.next().unwrap());
     for item in c {
-        count = count + 1;
-        if count < *len {
-            print!("{:?}, ", item);
-        }
-        else {
-            print!("{:?}", item);
-        }
+        print!(", {:?}", item);
     }
-    print!("]");
+}
+/*-- write comma separated list to String --*/
+fn put_coll_to_string<
+       C: ExactSizeIterator + Iterator
+   >(mut c:C) -> String
+     where <C as Iterator>::Item: Debug {
+    let mut result = 
+        format!("{:?}", c.next().unwrap());
+    for item in c {
+        result.push_str(&format!(", {:?}", item));
+    }
+    result
+}
+/*-- surround string with bookends --*/
+fn clamp(body: &str, bookend: &str) -> String {
+  let booker = bookend.to_string();
+  if booker.chars().nth(1).is_none() {
+    return body.to_string();
+  }
+  let mut result = String::new();
+  let bked = bookend.to_string();
+  let mut iter = bked.chars();
+  /*-- no panic only if bked is ascii --*/
+  let left = iter.next().unwrap();
+  let right = iter.next().unwrap();
+  result.push(left);
+  result.push_str(body);
+  result.push(right);
+  result
 }

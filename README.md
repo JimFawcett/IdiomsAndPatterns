@@ -7,4 +7,9 @@ C#, C++, and Rust
 Status:<br>
 Just starting - has a couple of very basic demos, many more to come  
 
+## Sample:
+<a href="https://jimfawcett.github.io/Resources/IdiomsAndPatterns/IaP_Data.html">IaP_Data</a>
+
+
+
 

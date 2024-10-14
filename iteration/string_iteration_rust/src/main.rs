@@ -57,12 +57,17 @@ fn idomatic_string_iteration() {
                            // for/in loop
     }
     /*-- nth(i) returns Option as i may not be in range --*/
-    let rslt = &test_string.chars().nth(1);
-    if rslt.is_some() {
-        let char2 = rslt.unwrap();
-        print!("\n  2nd character of {:?} is {}", test_string, char2);
+    let i = 1;
+    let rslt = &test_string.chars().nth(i);
+    if let Some(ch) = rslt {
+      print!(
+        "\n  at index {} char of {:?} is {}",
+         i, test_string, ch
+      );
     }
-
+    else {
+      print!("\n  index {} out of range", i);
+    }
     let ls = test_string.as_str();
     print!("\n  test_string: {:?}", ls);
     println!();
